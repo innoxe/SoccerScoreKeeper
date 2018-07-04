@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blackboard"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/fieldScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line_field"
+            android:baselineAligned="false"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/brokenchalk"
+                    android:gravity="center"
+                    android:text="@string/name_teamA"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/scoreGolTeamA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/vtks_chalk"
+                    android:gravity="center"
+                    android:text="@string/gol_teamA"
+                    android:textColor="#ffffff"
+                    android:textSize="56sp" />
+
+                <ImageButton
+                    android:id="@+id/gol_teamA_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@null"
+                    android:contentDescription="@string/desc_Btn_GolA"
+                    android:onClick="addScoreTeams"
+                    android:src="@drawable/btn_goal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/brokenchalk"
+                    android:gravity="center"
+                    android:text="@string/name_teamB"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/scoreGolTeamB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/vtks_chalk"
+                    android:gravity="center"
+                    android:text="@string/gol_teamB"
+                    android:textColor="#fff"
+                    android:textSize="56sp" />
+
+                <ImageButton
+                    android:id="@+id/gol_teamB_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@null"
+                    android:contentDescription="@string/desc_Btn_GolB"
+                    android:onClick="addScoreTeams"
+                    android:src="@drawable/btn_goal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fieldScore"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:id="@+id/lineFoulScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/foul_teamA_1"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/btn_back"
+                    android:fontFamily="@font/brokenchalk"
+                    android:onClick="addScoreTeams"
+                    android:text="@string/btn_foul"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/scoreFoulTeamA"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/vtks_chalk"
+                    android:gravity="center"
+                    android:text="@string/gol_teamB"
+                    android:textColor="#fff"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:contentDescription="@string/desc_Img_Whistle"
+                    android:src="@drawable/whistle_chalk" />
+
+                <TextView
+                    android:id="@+id/scoreFoulTeamB"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/vtks_chalk"
+                    android:gravity="center"
+                    android:text="@string/gol_teamB"
+                    android:textColor="#fff"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/foul_teamB_1"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/btn_back"
+                    android:fontFamily="@font/brokenchalk"
+                    android:onClick="addScoreTeams"
+                    android:text="@string/btn_foul"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_toLeftOf="@id/tvText"
+                    android:layout_toStartOf="@id/tvText"
+                    android:background="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tvText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/brokenchalk"
+                    android:text="@string/head_cards"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_toEndOf="@id/tvText"
+                    android:layout_toRightOf="@id/tvText"
+                    android:background="#ffffff" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lineYellowScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/yellowcard_teamA_2"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/btn_back"
+                    android:fontFamily="@font/brokenchalk"
+                    android:onClick="addScoreTeams"
+                    android:text="@string/btn_yellow"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/scoreYellowCardTteamA"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/vtks_chalk"
+                    android:gravity="center"
+                    android:text="@string/gol_teamB"
+                    android:textColor="#fff"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:contentDescription="@string/desc_Img_YellowCard"
+                    android:src="@drawable/yellow_card_chalk5" />
+
+                <TextView
+                    android:id="@+id/scoreYellowCardTteamB"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/vtks_chalk"
+                    android:gravity="center"
+                    android:text="@string/gol_teamB"
+                    android:textColor="#fff"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/yellowcard_teamB_2"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/btn_back"
+                    android:fontFamily="@font/brokenchalk"
+                    android:onClick="addScoreTeams"
+                    android:text="@string/btn_yellow"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/redcard_teamA_3"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/btn_back"
+                    android:fontFamily="@font/brokenchalk"
+                    android:onClick="addScoreTeams"
+                    android:text="@string/btn_red"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/scoreRedCardTeamA"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/vtks_chalk"
+                    android:gravity="center"
+                    android:text="@string/gol_teamB"
+                    android:textColor="#fff"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:contentDescription="@string/desc_Img_RedCard"
+                    android:src="@drawable/red_card_chalk" />
+
+                <TextView
+                    android:id="@+id/scoreRedCardTeamB"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/vtks_chalk"
+                    android:gravity="center"
+                    android:text="@string/gol_teamB"
+                    android:textColor="#fff"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/redcard_teamB_3"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/btn_back"
+                    android:fontFamily="@font/brokenchalk"
+                    android:onClick="addScoreTeams"
+                    android:text="@string/btn_red"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="#ffffff" />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:onClick="resetScore"
+                android:text="@string/btn_reset" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

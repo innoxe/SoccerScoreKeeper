@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="desc_Btn_GolA">Button per gol Team A</string>
+    <string name="desc_Btn_GolB">Button per gol Team B</string>
+    <string name="btn_foul">FALLO</string>
+    <string name="head_cards">CARTELLINI</string>
+    <string name="btn_yellow">GIALLO</string>
+    <string name="btn_red">ROSSO</string>
+    <string name="descImgWhistle">Immagine fischietto</string>
+    <string name="descImgYellowCard">Immagine cartellino giallo</string>
+    <string name="descImgRedCard">Immagine cartellino rosso</string>
+    <string name="toast_gol">La squadra %1$s ha segnato un gol!</string>
+    <string name="toast_foul">Un fallo commesso da un giocatore del team %1$s</string>
+    <string name="toast_yellowcard">Un giocatore del team %1$s ha ricevuto un cartellino giallo!</string>
+    <string name="name_teamB">Barcellona</string>
+    <string name="name_teamA">Juventus</string>
+    <string name="toast_redcard">Un giocatore del team %1$s è stato espulso!</string>
+    <string name="btn_reset">AZZERA</string>
+    <string name="toast_reset">Ho azzerato i punteggi</string>
+
+</resources>

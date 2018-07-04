@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name" translatable="false">Soccer Score Keeper</string>
+    <string name="name_teamA">Juventus</string>
+    <string name="name_teamB">Barcelona</string>
+    <string name="desc_Btn_GolA">Button gol for A Team</string>
+    <string name="desc_Btn_GolB">Button gol for B Team</string>
+    <string name="gol_teamA" translatable="false">0</string>
+    <string name="gol_teamB" translatable="false">0</string>
+
+    <string name="btn_foul">FOUL</string>
+    <string name="head_cards">CARDS</string>
+    <string name="btn_yellow">YELLOW</string>
+    <string name="btn_red">RED</string>
+
+    <string name="desc_Img_Whistle">Image of whistle</string>
+    <string name="desc_Img_YellowCard">Image of yellow card</string>
+    <string name="desc_Img_RedCard">Image of red card</string>
+
+    <string name="toast_gol">The Team %1$s scored a goal!</string>
+    <string name="toast_foul">A foul committed by the team %1$s player!</string>
+    <string name="toast_yellowcard">A team %1$s player got a Yelllow Card!</string>
+    <string name="toast_redcard">A player of %1$s is sent off the field!</string>
+    <string name="toast_reset">Resetting all scores!</string>
+
+    <string name="btn_reset">RESET</string>
+
+
+</resources>
