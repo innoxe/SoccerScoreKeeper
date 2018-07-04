@@ -3,7 +3,7 @@ Score Keeper App project from course ABND by Google in Udacity. The goal is to c
 
 This project is about combining various ideas and skills we’ve been practicing throughout the course. They include:
 
-Adding button code to your app
-Updating views
-Properly scoping variables
-Finding views by their ID
+- Adding button code to your app
+- Updating views
+- Properly scoping variables
+- Finding views by their ID
